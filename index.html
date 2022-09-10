@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Лскавян Армен</title>
+        <!-- Это комментарий далее идет тэг <link>, он нужен, чтобы сослаться на css-файл, который будет задавать параметры сайта -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class = "info">
+                <!-- Тут у нас ссылка на отдельный класс avatar, описывающий свойства
+                относящихся к нему объектов, например размер или скругление  -->
+                <img src="avatar.jpg" class = "avatar"/>
+                <div class="info-text">
+                    <h1>Лскавян А. Н.</h1>
+                    <p> Я студент второго курса магистратуры кафедры №11,<strong> "Экспериментальные Методы Ядерной Физики"</strong>
+                    по направлению Ядерные Физика и Технологии<strong> НИЯУ МИФИ</strong></p>
+                    <p> Люблю читать, изучать что-нибудь новое и заниматься спортом
+                    
+                    <h4>Мои контакты:</h4>
+                        <a href="https://vk.com/hetokasemkes">Вконтакте </a>|
+                        <a href="https://t.me/starormem">Telegram </a>
+                </div>
+            </div>
+            <!-- Тут у нас двойной класс - я одновременно говорю, что надо использовать свойства block и еще bg-orange -->
+            <br />
+            <div class="block bg-red">
+                <h4>Мои хобби и увлечения:</h4>
+                <ul class = "list">
+                    <li>Чтение</li>
+                    <li>Писательство</li>
+                    <li>Программирование</li>
+                    <li>Занятия в тренажерном зале</li>
+                </ul>
+            </div>
+            <div class="block bg-orange">
+                <h4>Образование:</h4>
+                <table class = "table"> 
+                    <tr>
+                        <td><a href="https://sch962sv.mskobr.ru/">Школа №962</a></td>
+                        <td>9 классов</td>
+                        <td>Общеобразовательное</td>
+                        <td>2006-2015 гг.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://lyc1568.mskobr.ru/">Лицей №1568 имени Пабло Неруды</a></td>
+                        <td>10-11 классы</td>
+                        <td>Физико-математическое</td>
+                        <td>2015-2017 гг.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://mephi.ru/">НИЯУ МИФИ</a></td>
+                        <td>1-2 курсы бакалавриата</td>
+                        <td>Ядерные Физика и Технологии</td>
+                        <td>2017-2019 гг.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://mephi.ru/">НИЯУ МИФИ</a></td>
+                        <td>3-4 курсы бакалавриата</td>
+                        <td>Ядерные Физика и Технологии, <a href="http://www.kaf07.mephi.ru/">кафедра №7</a></td>
+                        <td>2019-2021 гг.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://mephi.ru/">НИЯУ МИФИ</a></td>
+                        <td>1-2 курсы Магистратуры</td>
+                        <td>Ядерные Физика и Технологии, <a href="https://femtomir.mephi.ru/">кафедра №11</a></td>
+                        <td>2021-2023 гг.</td>
+                    </tr>
+                    <tr>
+                        <td>Интернет</td>
+                        <td>Самообразование</td>
+                        <td>Frontend разработка</td>
+                        <td>2022 г. - н.в.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="block bg-green">
+                <h4>Портфолио</h4>
+                <strong>Научные статьи:</strong> 
+                <ul class = "list">
+                    <li><a href="https://arxiv.org/abs/2110.00496">Energy spectra of secondaries in proton-proton interactions</a></li>
+                </ul>
+                <strong>Сайты:</strong> 
+                <ul class = "list"  >
+                    <li><a href="https://armen-bot.github.io/firstproject/">Сайт-пробник (html)</a></li>
+                    <li><a href="https://armen-bot.github.io/Armen-Lskavyan-CV/">Сайт-резюме (html)</a></li>
+            </div>
+            <div class="contact">
+                <h4>Связаться со мной:</h4>
+                <form action="">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="name">Ваше Имя:</label>
+                            <input type="text" id="name" placeholder = "Имя"> <br><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="secname">Ваша Фамилия:</label>
+                            <input type="text" id="secname" placeholder = "Фамилия"> <br><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Ваша почта:</label>
+                            <input type="text" id="email" placeholder = "yourmail@google.com"> <br><br>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">Ваше сообщение:</label><br>
+                        <textarea id="mail" rows = "5" cols="40"  placeholder = "Текст сообщения"   > </textarea><br>
+                    </div>
+                    <input class="button" value = "Связаться" > 
+                </form>
+            </div>
+        
+            <!-- <div class="navigator">
+
+            </div> -->
+
+            <div style="margin-bottom: 200px"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Можно сразу обратиться ко всем (вообще всем) элементам страницы и прописать какие-то общие параметры */
+/* *{padding: 0; margin: 0;} */
+
+body {
+    background-color: rgb(235, 234, 234);
+    color: #0f141e;
+
+    font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif; 
+    /* font: normal 16px 'Roboto', 'sans-serif'; */
+}
+
+a{
+    text-decoration: none;  /* Убираем обязательное подчеркивание ссылок */
+    color: #0f141e;
+}
+
+/* Обратимся к состоянию класса a - то есть к ссылкам в случае наведения на них курсора, то есть hover */
+a:hover{
+text-decoration:underline
+}
+/* Аналогично, но другое состояние - active - оно возникает, когда мы нажимаем на ПКМ */
+a:active{
+    color:firebrick
+}
+/* Еще одно состояние - на этот раз для уже посещенных ссылок */
+a:visited{
+    color: #86898f
+}
+
+.avatar{
+    width: 200px;
+    border-radius: 10%;
+    box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.25)
+}
+/* Вместо class можно использовать id. Разница в том, что id должен быть уникален,
+ а еще вместо точки [.] перед названием ставится решетка [#]*/
+
+.info{
+    margin-bottom:20px;
+    display:flex
+}
+
+/* Сейчас будем задавать адаптивность сайту - то есть чтоб при изменении окна его не плющило, а он нормально отображался */
+/* Описываем набор правил, работающих до 700px - то есть если я буду сужать окно, то на определенной ширине начнут работать
+эти правила */
+@media (max-width: 700px) {
+    info{
+        text-align: center;
+        display: block
+    }
+}
+
+
+ .info p{
+    color: #86898f; 
+    font-style: italic; font-weight: normal;
+    text-decoration: none; 
+    /* text-transform: capitalize; 
+    letter-spacing: 10px;
+    word-spacing: 10px; */
+ }
+
+.info-text{
+    margin-left: 40px;
+}
+
+.info-text h4{
+    margin-bottom: 10px;
+}
+
+.container{
+    max-width: 750px;
+    margin:auto;
+    padding-top: 30px;
+}
+
+/* .connect{
+    background-color: lightblue;
+    padding-bottom: 4px; padding-top: 2px; 
+    border-style: double; border-radius: 15px; border-width: 2px; border-color: darkcyan;
+    margin: 20px
+
+}
+
+.connect h2{
+    text-align: center;
+} */
+
+/*В первом варианте только дочерние div будут получать задаваемые свойства - "внуки уже их не получат"  */
+/* .box-model > div{  */
+/* .box-model div{
+    background-color: black;
+    height: 200px;
+    width: 25%;
+    float: left;
+    border-style:dotted ; border-color: red; border-width: 5px;
+    box-sizing: border-box; 
+    } */
+
+/* По умолчанию в этом параметре стоит значение content-box, из=за чего 
+габариты border не включаются в указанную ширину width - поэтому если не сменить сайзинг, то четыре элемента по 25% каждый 
+не поместятся в одну линию */
+
+.block{
+    padding: 15px 20px;
+    background-color:aquamarine; 
+    border-radius: 20px;
+    /*border-style: solid; border-color: blueviolet; */
+    margin-bottom: 20px
+
+}
+
+.bg-orange{
+    background-color: #fff9dc;
+
+}
+
+.bg-green{
+    background-color: #e5ffe7;
+}
+
+.bg-red{
+    background-color: #ffe5e5;
+    margin-top: 20px
+}
+
+.list{
+    padding: 0px 20px;
+    /* list-style: none;  Это стиль списка - например кружки, цифры, ну и none - никакого стиля */
+}
+.list li{
+    color:#86898f;
+    margin-bottom: 10px
+}
+
+.table{
+    width: 100%;
+}
+
+table td{
+    padding-bottom: 10px; /* В данном случае используется не margin, а padding,
+     так как td обладает свойством display: table-cell, тут margin не сработает */
+}
+
+/* А теперь случай, когда мы хотим задать какие-то свойства только определенным элементам,
+ например только одной из ячеек строчки таблицы 
+ Тут мы затрагиваем только 4 td, остальные не задеты 
+ Еще одна фишка - если мы хотим применить то же свойство к еще одному элементу, то можем просто написать его через запятую
+.table td:nth-child(3), .table td:nth-child(4){ 
+    color: #86898f
+}*/
+
+/* Для примера, можно еще сделать вот так - even выбирает все четные элементы, а odd - нечетные
+.table tr:nth-child(odd){ 
+    background-color:blue
+}*/
+
+.contact h4{
+    text-align: center
+}
+
+/* У элементов есть такой параметр, как display, который определяет их поведение - они могут идти например строками друг за другом, 
+а могут - блоками (например так делает div), то есть каждый блок начинаетсяя с новой строчки */
+.form-group label{
+    display:block;
+    font-size: 16px;
+    color:#86898f
+}
+/* И если изменить display элемента на block, то соответственно он и будет вести себя как блок */
+
+.form-group input, .form-group textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border:none;
+    background: transparent; /* transparent - то есть прозрачный */
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding-top: 10px; padding-bottom: 10px;
+    outline: none;
+    font-family: inherit; /* inherit означает, что шрифт ввода тут должен наследоваться */
+}
+
+.row{
+    display:flex;
+    margin-bottom: 20px
+}
+
+.row > .form-group{
+    width:50%;
+    margin-right: 20px;
+}
+
+.row > .form-group:last-child{
+    margin-right: 0px;
+}
+
+.button{
+    background: black;
+    color: white;
+    padding: 20px 15px;
+    border: none; border-radius: 8px;
+    font-family: inherit;
+    cursor:pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button:hover{
+    opacity: 0.9
+}
+
+.navigator{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #86898f;
+    opacity: 0.7;
+
+}
